@@ -5,18 +5,20 @@ $(document).ready(function() {
 	initializePage();
 })
 
+
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	var name = $(this).text()
-	//$('<div class = "friends"/>').click(anagrammedName($(this).text()))
-	//$("friends.class").click(anagrammedName)
-	$("friends.class").click(anagrammedName(name))
+	$(".nameChange").click(friendClick);
 }
 
+function friendClick(e){
+	e.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
 
+}
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!

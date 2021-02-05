@@ -4,40 +4,35 @@
 <head>
 	<title>My HCI Friends</title>	
 	<meta charset="utf-8">
-	<!-- css -->
-	<link href = "/css/bootstrap-theme.css" rel="stylesheet">
-	<link href = "/css/bootstrap.css" rel="stylesheet">
-	]<link href = "/css/hci-friends.css" rel="stylesheet">
 
-	<script src="/js/jquery-1.11.0.js"></script>
-	<script src="/js/hci-friends.js"></script>
-	<script src="/js/bootstrap.js"></script>
 
-	<meta name="viewport" content = "width=device-width, 
-	initial scale = 1.0">
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/hci-friends.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="css/hci-friends.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=devicec-width, initial-scale=1.0">
 	
 </head>
 
 <body>
-	<h1>My HCI Friends</h1>
 	<div class="container">
+	<h1>My HCI Friends</h1>
 
-	<ol></ol>
+
 	{{#each friends}}
-		<div class="friends" id="{{id}}">
-			<img src="{{imageURL}}" class="img-rounded" alt="random friend" width="500", height="500">
-			<h4><a href = "{{id}}"> {{name}}</a></h4>
-			<p>{{description}}</p>
-			<hr style = "width:50%">
-		</div>
-	{{/each}}
-	</ol>
-
-	<div class= "friends">
-		<img src = "https://i.kym-cdn.com/photos/images/newsfeed/001/975/766/e39.png" width ="350">
-		<h2> My Friend Deepak </h2>
-		<p>Refer to the Logistics Page Deepak</p>
+	<div class="friends">
+	 <img src="{{imageURL}}" class="img-responsive", width="500"> 
+	 <h3><a href="#"><div class="nameChange">{{name}}</div></a></h3>
+	 <p>{{description}}</p>
+	 <hr>
 	</div>
+	{{/each}}
+</div>
 
 	<form id="addFriendForm" role="form" method="get" action="/add">
 		<h3>Add a friend</h3>
@@ -53,4 +48,5 @@
 	</form>
 	</div>
 </body>
+
 </html>
